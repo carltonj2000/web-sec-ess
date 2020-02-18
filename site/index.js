@@ -31,3 +31,9 @@ app.listen(port);
 console.log(
   `open https://${domain} to observe localhost network traffic via Charles`
 );
+
+const redirApp = express();
+redirApp.use(function(req, res) {
+  return res.redirect(`https://${domain}${req.url}`);
+});
+redirApp.listen(80);
