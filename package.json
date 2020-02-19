@@ -4,7 +4,7 @@
   "description": "Sample Application to demonstrate security best practices",
   "scripts": {
     "start": "nodemon $INIT_CWD/site/index.js",
-    "start:evil.com": "node $INIT_CWD/evil.com/index.js"
+    "start:evil.com": "nodemon $INIT_CWD/evil.com/index.js"
   },
   "repository": {
     "type": "git",
