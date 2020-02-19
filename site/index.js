@@ -27,7 +27,7 @@ app.use(
     cookie: {
       sameSite: "lax",
       secure: true,
-      httpOnly: false
+      httpOnly: true
     }
   })
 );
