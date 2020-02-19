@@ -3,6 +3,8 @@ const helmet = require("helmet");
 const csurf = require("csurf");
 const localHost = require("https-localhost");
 const session = require("express-session");
+const bodyParser = require("body-parser");
+
 const routeLogin = require("./routes/login");
 const routeMessages = require("./routes/messages");
 
@@ -18,6 +20,23 @@ app.use(
     preload: true
   })
 );
+
+app.use(bodyParser.json({ type: ["json", "application/csp-report"] }));
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      scriptSrc: ["'self'", "https:"],
+      reportUri: "/report-violation"
+    },
+    reportOnly: false
+  })
+);
+
+app.route("/report-violation").post((req, res) => {
+  console.log("CSP Violation: ", req.body || "No data");
+  res.status(200).send("ok");
+});
 
 app.use(
   session({
