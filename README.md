@@ -19,7 +19,7 @@ From the repository link in the above section, did the following:
 - [Git hub repo](https://github.com/carltonj2000/web-sec-ess)
   created with all content note above.
 
-## Lesson 12
+## Lesson 14
 
 ---
 
