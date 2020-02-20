@@ -29,10 +29,15 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json({ type: ["json", "application/csp-report"] }));
 
+const selfNonceSrc = ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`];
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
+      defaultSrc: ["'none'"],
+      scriptSrc: selfNonceSrc,
+      imgSrc: selfNonceSrc,
+      styleSrc: selfNonceSrc,
+      connectSrc: selfNonceSrc,
       reportUri: "/report-violation"
     },
     reportOnly: false
